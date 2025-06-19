@@ -1,0 +1,98 @@
+# Emotional State Profiles - DDS-Driven Frequency Tuning
+
+states:
+
+  serenity:
+    carrier_freq: 432    # Natural tuning frequency
+    mod_freq: 8.0        # Alpha wave, calm focus
+    waveform: sine
+    pulse_rate: 0.5
+    harmonic_bleed: false
+    duration_sec: 300
+    notes: "Stabilizes subject. Recommended during pre-conflict deescalation."
+
+  love_bond:
+    carrier_freq: 528
+    mod_freq: 10.0
+    waveform: triangle
+    pulse_rate: 1.0
+    harmonic_bleed: false
+    duration_sec: 240
+    notes: "Unidirectional empathy encoding. Use with high exposure only."
+
+  unity:
+    carrier_freq: 963
+    mod_freq: 40.0
+    waveform: sine
+    pulse_rate: 0.3
+    harmonic_bleed: false
+    duration_sec: 480
+    notes: "High-vibration crown harmonics. Induces openness, religious awe."
+
+  confusion:
+    carrier_freq: 6.66
+    mod_freq: 2.5
+    waveform: square
+    pulse_rate: 2.0
+    harmonic_bleed: true
+    duration_sec: 180
+    notes: "Short-term disorientation. Use in crowds or breach scenarios."
+
+  dread:
+    carrier_freq: 19.0
+    mod_freq: 4.5
+    waveform: sawtooth
+    pulse_rate: 1.2
+    harmonic_bleed: true
+    duration_sec: 300
+    notes: "Ghost frequency injection. Known to cause anxiety + nausea."
+
+  rage:
+    carrier_freq: 33.0
+    mod_freq: 13.0
+    waveform: square
+    pulse_rate: 2.5
+    harmonic_bleed: true
+    duration_sec: 210
+    notes: "Triggers limbic instability. DO NOT USE ON OPERATIVES."
+
+  shutdown:
+    carrier_freq: 2.0
+    mod_freq: 0.5
+    waveform: sine
+    pulse_rate: 0.1
+    harmonic_bleed: true
+    duration_sec: 600
+    notes: "Theta-delta collapse. Recommended for crowd sedation."
+
+  obsession_loop:
+    carrier_freq: 111.0
+    mod_freq: 7.83
+    waveform: triangle
+    pulse_rate: 0.9
+    harmonic_bleed: true
+    duration_sec: 900
+    notes: "Memory reinforcement pattern. Long-term dwell risk."
+
+  dissociation:
+    carrier_freq: 936
+    mod_freq: 3.3
+    waveform: triangle
+    pulse_rate: 1.1
+    harmonic_bleed: true
+    duration_sec: 360
+
+  love_loss:
+    carrier_freq: 528
+    mod_freq: 19.0
+    waveform: square
+    pulse_rate: 1.0
+    harmonic_bleed: true
+    duration_sec: 480
+    notes: "Creates emotional confusion. Often misperceived as nostalgia."
+
+global:
+  shielding_required: true
+  waveform_precision: high
+  output_mode: directional
+  sync_interval_sec: 5
