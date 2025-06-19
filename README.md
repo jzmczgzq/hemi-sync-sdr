@@ -27,3 +27,14 @@ This framework is designed to explore the intersection of Software Defined Radio
    git clone https://github.com/yourusername/hemi-sync-sdr
    cd jungian-sdr
    ```
+2. Install the requirements
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Connect to your SDR Device.
+4. Launch application/
+   ```bash
+   python main.py
+   ```
+
+Any questions message 1181987@protonmail.com
