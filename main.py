@@ -10,7 +10,7 @@ def load_emotional_states(file_path):
 
 def main():
     # Load YAML config
-    config = load_emotional_states('emostate_profiles.yaml')
+    config = load_emotional_states('frequency_mapper.yaml')
     states = config.get('states', {})
 
     print("Welcome to the DDS Emotional SDR Interface")
