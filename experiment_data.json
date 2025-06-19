@@ -1,0 +1,121 @@
+{
+  "experiment_meta": {
+    "date": "2025-03-19",
+    "location": "Remote Acoustic Lab B",
+    "conducted_by": "",
+    "sample_size": 12,
+    "conditions": "Subjects seated in reflective room. Duration of each tone exposure: No visual stimuli present."
+  },
+  "results": [
+    {
+      "frequency": 2.5,
+      "band": "Delta",
+      "description": "Deep unconscious access",
+      "observed_effects": [
+        "Increased delta wave presence (EEG)",
+        "Muscle twitches",
+        "Sttaed experiences of vivid hypnagogic images"
+      ],
+      "psychological_tags": ["Subconscious", "Sleep", "Dissociation"],
+      "physiological_responses": {
+        "heart_rate_avg": 58,
+        "galvanic_skin_response": "Low",
+        "EEG_dominant": "Delta"
+      }
+    },
+    {
+      "frequency": 7.83,
+      "band": "Theta",
+      "description": "Schumann resonance",
+      "observed_effects": [
+        "Calm but alert mental state",
+        "Synchronization across test subjects",
+        "Mild euphoric response in 3 subjects"
+      ],
+      "psychological_tags": ["Calm", "Earth resonance", "Lucid"],
+      "physiological_responses": {
+        "heart_rate_avg": 63,
+        "galvanic_skin_response": "Moderate",
+        "EEG_dominant": "Theta"
+      }
+    },
+    {
+      "frequency": 10.5,
+      "band": "Alpha",
+      "description": "Focused attention, flow state",
+      "observed_effects": [
+        "Significant increase in general function",
+        "Flow-state self-reports",
+      ],
+      "psychological_tags": ["Focus", "Flow", "Learning"],
+      "physiological_responses": {
+        "heart_rate_avg": 70,
+        "galvanic_skin_response": "Baseline",
+        "EEG_dominant": "Alpha"
+      }
+    },
+    {
+      "frequency": 18.0,
+      "band": "Beta",
+      "description": "Mild anxiety threshold",
+      "observed_effects": [
+        "Increased fidgeting in 7/12 subjects",
+        "Mild panic attack in 1 subject",
+        "Raised stress reports"
+      ],
+      "psychological_tags": ["Anxiety", "Alert", "Stress"],
+      "physiological_responses": {
+        "heart_rate_avg": 82,
+        "galvanic_skin_response": "Elevated",
+        "EEG_dominant": "Beta"
+      }
+    },
+    {
+      "frequency": 111.0,
+      "band": "Gamma",
+      "description": "Mystical response threshold (per McMoneagle studies)",
+      "observed_effects": [
+        "Reports of tunnel vision or temporal stutter",
+        "High synchronization of heartbeat and breath",
+      ],
+      "psychological_tags": ["Transcendent", "Disembodied", "Anomalous"],
+      "physiological_responses": {
+        "heart_rate_avg": 66,
+        "galvanic_skin_response": "High",
+        "EEG_dominant": "Gamma"
+      }
+    },
+    {
+      "frequency": 528.0,
+      "band": "Solfeggio",
+      "description": "DNA repair frequency (pseudoscientific origin)",
+      "observed_effects": [
+        "Subjective emotional resolution in 5/12",
+        "Assumed Reduced HRV spike response",
+        "Improved mood evident"
+      ],
+      "psychological_tags": ["Healing", "Peace", "Harmony"],
+      "physiological_responses": {
+        "heart_rate_avg": 60,
+        "galvanic_skin_response": "Baseline",
+        "EEG_dominant": "Alpha"
+      }
+    },
+    {
+      "frequency": 432.0,
+      "band": "Harmonic",
+      "description": "Allegedly 'natural' tuning frequency",
+      "observed_effects": [
+        "Increased coherence across heart/breath/brain rhythms",
+        "Reported Subjective relaxation and memory flashbacks",
+        "1 subject reported synesthesia-like effect"
+      ],
+      "psychological_tags": ["Nostalgia", "Balance", "Calm"],
+      "physiological_responses": {
+        "heart_rate_avg": 64,
+        "galvanic_skin_response": "Low",
+        "EEG_dominant": "Alpha"
+      }
+    }
+  ]
+}
