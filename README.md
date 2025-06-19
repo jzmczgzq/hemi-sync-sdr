@@ -2,7 +2,7 @@
 
 ## Overview
 
-This framework is designed to explore the intersection of Software Defined Radio (SDR) technology and Jungian psychology by utilizing short-range RF vibrations to induce specific emotional responses in subjects. By leveraging the principles of Jungian archetypes and vibrational frequencies, this project creates states within the subject that resonate within the subconscious mind.
+This framework is designed to explore the intersection of Software Defined Radio (SDR) technology and hemi-sync concepts by utilizing short-range RF vibrations to induce specific emotional responses in subjects. By leveraging the principles of Jungian archetypes and vibrational frequencies, this project creates states within the subject that resonate within the subconscious mind.
 
 ## Features
 
@@ -24,6 +24,6 @@ This framework is designed to explore the intersection of Software Defined Radio
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/jungian-sdr.git
+   git clone https://github.com/yourusername/hemi-sync-sdr
    cd jungian-sdr
    ```
