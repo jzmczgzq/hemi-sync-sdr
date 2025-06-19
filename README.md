@@ -25,7 +25,7 @@ This framework is designed to explore the intersection of Software Defined Radio
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/hemi-sync-sdr
-   cd jungian-sdr
+   cd hemi-sync-sdr
    ```
 2. Install the requirements
    ```bash
