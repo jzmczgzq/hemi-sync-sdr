@@ -1,57 +1,61 @@
-import json
+import yaml
 import sys
 from sdr_controller import SDRController
-from frequency_mapper import get_frequency
 from signal_processor import SignalProcessor
 
-def load_frequencies(file_path):
-    """Load frequency mappings from a JSON file."""
+def load_emotional_states(file_path):
+    """Load emotional state profiles from a YAML file."""
     with open(file_path, 'r') as f:
-        return json.load(f)
+        return yaml.safe_load(f)
 
 def main():
-    # Load frequencies from JSON file
-    frequencies = load_frequencies('frequencies.json')
+    # Load YAML config
+    config = load_emotional_states('emostate_profiles.yaml')
+    states = config.get('states', {})
 
-    print("Welcome to the Jungian SDR!")
-    print("Select a Jungian archetype to induce feelings:")
-    
-    # Display available archetypes
-    for i, archetype in enumerate(frequencies.keys(), start=1):
-        print(f"{i}. {archetype}")
+    print("Welcome to the DDS Emotional SDR Interface")
+    print("Select an emotional state to transmit:")
 
-    # Get user selection
+    state_names = list(states.keys())
+
+    for i, name in enumerate(state_names, start=1):
+        print(f"{i}. {name} - {states[name].get('notes', 'No description')}")
+
+    # User selection
     try:
         choice = int(input("Enter the number of your choice: ")) - 1
-        archetype = list(frequencies.keys())[choice]
+        state_key = state_names[choice]
+        profile = states[state_key]
     except (ValueError, IndexError):
         print("Invalid choice. Exiting.")
         sys.exit(1)
 
-    # Get the corresponding frequency
-    frequency = get_frequency(archetype, frequencies)
-    print(f"Selected Archetype: {archetype} | Frequency: {frequency} Hz")
+    print(f"\n[✓] Selected: {state_key}")
+    print(f"    ↳ Carrier: {profile['carrier_freq']} Hz")
+    print(f"    ↳ Modulation: {profile['mod_freq']} Hz")
+    print(f"    ↳ Waveform: {profile['waveform']}")
+    print(f"    ↳ Harmonics: {'On' if profile['harmonic_bleed'] else 'Off'}")
+    print(f"    ↳ Duration: {profile['duration_sec']}s")
 
-    # Initialize SDR controller
+    # Initialize SDR and processor
     sdr = SDRController()
-    
-    # Initialize signal processor
-    signal_processor = SignalProcessor()
+    processor = SignalProcessor()
 
-    # Start transmission
     try:
-        sdr.start_transmission(frequency)
-        print("Transmission started. Press Ctrl+C to stop.")
-        
-        # Process signals (this could be a loop or a callback in a real application)
-        while True:
-            signal_processor.process_signal(sdr.get_signal())
+        # Start transmission with full profile
+        sdr.start_transmission(profile)
+        print("⚡ Transmission started. Press Ctrl+C to terminate.")
+
+        # Optional: Simulate processing (or just run transmission if passive)
+        duration = profile.get('duration_sec', 60)
+        for _ in range(duration):
+            processor.process_signal(sdr.get_signal())
+
     except KeyboardInterrupt:
-        print("Stopping transmission...")
+        print("\nInterrupted by user.")
     finally:
         sdr.stop_transmission()
-        print("Transmission stopped.")
+        print("Transmission safely stopped.")
 
 if __name__ == "__main__":
     main()
-
